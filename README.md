@@ -6,6 +6,13 @@ A CLI Retrieval-Augmented Generation (RAG) Agent powered by LangChain + Hugging 
 - Query local knowledge or fallback to web
 - Logs all Q&A interactions as JSON
 
+## Architecture
+PDFs → Chunks → Embeddings → FAISS
+             ↓
+        Retriever → Agent
+             ↓
+    [LLM Answer + Sources]
+
 ## 🚀 Quick Start
 ```bash
 git clone <your_repo_url>
@@ -15,4 +22,5 @@ cp .env.example .env
 python main.py
 
 
-## Architecture
+
+
